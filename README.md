@@ -1,4 +1,4 @@
-# Scaling Properties of Diffusion Models For Perceptual Tasks
+# Scaling Properties of Diffusion Models<br>For Perceptual Tasks
 
 Official PyTorch Implementation (Coming Soon...)
 
