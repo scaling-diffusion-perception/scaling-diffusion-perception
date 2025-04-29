@@ -1,0 +1,37 @@
+pipeline:
+  name: DiTPipeline
+  kwargs:
+    scale_invariant: true
+    shift_invariant: true
+    causal_attn: false
+    mean_pool_gen: false
+    beta_schedule: squaredcos_cap_v2
+
+sigma_schedule: karras
+
+multitask: true
+
+depth_normalization:
+  type: scale_shift_depth
+  clip: true
+  norm_min: -1.0
+  norm_max: 1.0
+  min_max_quantile: 0.02
+
+augmentation:
+  lr_flip_p: 0.5
+
+multi_res_noise:
+  strength: 0.9
+  annealed: true
+  downscale_strategy: original
+
+validation:
+  denoising_steps: 50
+  ensemble_size: 5  # simplified setting for on-training validation
+  processing_res: 0
+  match_input_res: false
+  resample_method: bilinear
+  main_val_metric: abs_relative_difference
+  main_val_metric_goal: minimize
+  init_seed: 2024
