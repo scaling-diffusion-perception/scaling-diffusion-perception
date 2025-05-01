@@ -45,7 +45,7 @@ wget -O ckpts/dit_moe_generalist_fixed.pt https://huggingface.co/zeeshanp/scalin
 ```
 
 #### Download Stable-Diffusion-2 VAE
-Our model uses the Stable-Diffusion-2 VAE. Download the checkpoint [here](https://huggingface.co/zeeshanp/scaling_diffusion_perception). Ensure the path to the stable-diffusion-2 directory is correctly specified in the `--path_to_sd` argument during inference.
+Our model uses the Stable-Diffusion-2 VAE. Download the checkpoint [here](https://huggingface.co/stabilityai/stable-diffusion-2). Ensure the path to the stable-diffusion-2 directory is correctly specified in the `--path_to_sd` argument during inference.
 
 
 ### Dataset Setup
